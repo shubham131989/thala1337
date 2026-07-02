@@ -1,0 +1,28 @@
+{
+  "ConnectionStrings": {
+    "DefaultConnection": "Server=db;User Id=sa;Password=Password123;"
+  }
+}
+using System;
+
+namespace DummyDotNetScan
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            string password = "Admin123";
+            Console.WriteLine(password);
+
+            string userInput = Console.ReadLine();
+            string query = "SELECT * FROM Users WHERE Name='" + userInput + "'";
+            Console.WriteLine(query);
+        }
+    }
+}
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+  </PropertyGroup>
+</Project>
+
